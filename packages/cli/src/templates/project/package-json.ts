@@ -32,7 +32,7 @@ export const template = `{
     "typescript": "4.7.4",
     "ts-node": "9.1.1",
     "@types/node": "16.11.7",
-    "ttypescript": "1.5.15",
+    "ts-patch": "2.0.2",
     "graphql": "^16.6.0"
   },
   "engines": {
@@ -45,7 +45,7 @@ export const template = `{
   "scripts": {
     "lint:check": "eslint --ext '.js,.ts' **/*.ts",
     "lint:fix": "eslint --quiet --fix --ext '.js,.ts' **/*.ts",
-    "build": "ttsc -b tsconfig.json",
+    "build": "tsc -b tsconfig.json",
     "clean": "rimraf ./dist tsconfig.tsbuildinfo",
     "test": "AWS_SDK_LOAD_CONFIG=true BOOSTER_ENV=test nyc --extension .ts mocha --forbid-only \\"test/**/*.test.ts\\""
   },
